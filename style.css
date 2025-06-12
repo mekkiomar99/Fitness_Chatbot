@@ -1,0 +1,128 @@
+/* Styles pour le chat */
+body {
+    min-height: 100vh;
+    position: relative;
+    background-image: url('images/gr_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+#chat-container {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f3f4f6;
+    background-image: url('images/gr_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#chat-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+#chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-container::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0;
+    border-radius: 4px;
+}
+
+#bot-capabilities {
+    background-image: url('images/gr_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#bot-capabilities::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.message {
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+    word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.user-message {
+    margin-left: auto;
+    background-color: rgba(243, 244, 246, 0.9);
+    border: 1px solid #e5e7eb;
+}
+
+.bot-message {
+    margin-right: auto;
+    background-color: rgba(239, 246, 255, 0.9);
+    border: 1px solid #bfdbfe;
+}
+
+.bot-error {
+    color: #ef4444;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+/* Animation de chargement */
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style pour l'input */
+input:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: #3b82f6;
+}
